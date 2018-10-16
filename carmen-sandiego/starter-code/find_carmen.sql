@@ -23,3 +23,15 @@ SELECT country.name FROM country
     AND countrylanguage.isofficial IS true
     GROUP BY country.name
 
+--This doesn't make sense based on the last set of instructions
+#5
+SELECT name FROM country WHERE code = 'BRA';
+
+#6
+SELECT city.name FROM country
+    JOIN city ON city.id = country.capital
+    WHERE country.name = 'Brazil';
+
+#7
+SELECT name, population FROM city
+    WHERE population = 91084;
